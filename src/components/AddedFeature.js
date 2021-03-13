@@ -1,5 +1,5 @@
 import React from 'react';
-
+//import connect, define addStateToProps
 const AddedFeature = props => {
   return (
     <li>
