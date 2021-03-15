@@ -8,7 +8,10 @@ const AdditionalFeature = props => {
       <button
         className="button"
         onClick={() => {
-          props.addFeature(props.feature)
+          // Ternary to check if feature has already been added
+          props.features.includes(props.feature)
+            ? alert("Feature already Added!")
+            : props.addFeature(props.feature)
         }}
       >
         Add
@@ -18,4 +21,9 @@ const AdditionalFeature = props => {
   );
 };
 
-export default connect(null, { addFeature })(AdditionalFeature);
+const mapStateToProps = (state) => {
+  return {
+    features: state.car.features
+  }
+}
+export default connect(mapStateToProps, { addFeature })(AdditionalFeature);
