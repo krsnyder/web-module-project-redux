@@ -29,6 +29,7 @@ const reducer = (state = initialState, action) => {
         }
       })
     case (ADD_FEATURE):
+      
       return ({
         ...state,
         additionalPrice: state.additionalPrice + action.payload.price,
