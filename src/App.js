@@ -13,7 +13,7 @@ const App = () => {
         <AddedFeatures/>
       </div>
       <div className="box">
-        {/* <AdditionalFeatures/> */}
+        <AdditionalFeatures/>
         {/* <Total/> */}
       </div>
     </div>
